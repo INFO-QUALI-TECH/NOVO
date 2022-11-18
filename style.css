@@ -33,6 +33,11 @@ hr {
   color: inherit;
   border-top-width: 1px;
 }
+#botao{
+  width: 17em;
+  height: 25px;
+  border: #ffffff solid 2px;
+}
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
