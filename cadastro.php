@@ -1,21 +1,21 @@
 <?php
 
-$login = $_POST['login'];
-$senha = MD5($_POST['senha']);
-$connect = mysql_connect('nome_do_servidor','nome_de_usuario','senha');
-$db = mysql_select_db('nome_do_banco_de_dados');
-$query_select = "SELECT login FROM usuarios WHERE login = '$login'";
+$login = $_POST['root'];
+$senha = MD5($_POST['galo1313']);
+$connect = mysql_connect('localhost','root','galo1313');
+$db = mysql_select_db('cadastro');
+$query_select = "SELECT login FROM cadastro WHERE login = '$idNomes'";
 $select = mysql_query($query_select,$connect);
 $array = mysql_fetch_array($select);
-$logarray = $array['login'];
+$logarray = $array['idNomes'];
 
-  if($login == "" || $login == null){
+  if($idNomes == "" || $idNomes == null){
     echo"<script language='javascript' type='text/javascript'>
     alert('O campo login deve ser preenchido');window.location.href='
     cadastro.html';</script>";
 
     }else{
-      if($logarray == $login){
+      if($logarray == $idNomes){
 
         echo"<script language='javascript' type='text/javascript'>
         alert('Esse login já existe');window.location.href='
@@ -23,7 +23,7 @@ $logarray = $array['login'];
         die();
 
       }else{
-        $query = "INSERT INTO usuarios (login,senha) VALUES ('$login','$senha')";
+        $query = "INSERT INTO cadastro (idNomes) VALUES ('$idNomes')";
         $insert = mysql_query($query,$connect);
 
         if($insert){
