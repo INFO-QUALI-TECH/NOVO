@@ -1519,7 +1519,7 @@ p {
   width: 100%;
   border-radius: 100px;
   border-width: 1px;
-  border-color: hsla(0,0%,100%,.3);
+  border-color: hsl(0deg 0% 0%);;
   background-color: transparent;
   padding-left: 32px;
   padding-right: 32px;
